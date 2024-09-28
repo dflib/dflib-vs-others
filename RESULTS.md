@@ -19,5 +19,9 @@ Memory
 DF| +Load         | +Aggregate
 --|---------------|--
 dflib | 1,887,541,480 | 136,328
-dflib-exp | 360,893,680   | 130,632
+dflib-exp | 360,893,680   | 130,632 
 df-ec | 315,132,200   | 120,272
+
+Notes:
+* compact String column is needed for both memory and performance
+* To reduce the memory footprint further, need a "float" primitive type support

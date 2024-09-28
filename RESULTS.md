@@ -11,7 +11,7 @@ Time:
 DF| All     | Load | Aggregate | Iterate
 --|---------|------|-----------|--
 dflib | 11.493s | 9515 | 1802      | 35
-dflib-exp | 10.570s | 9095 | *1295*    | 34 
+dflib-exp | 10.570s | 9095 | **1295**  | 34 
 df-ec | 10.633s | 8257 | 2183      | 33
 
 Memory

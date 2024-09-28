@@ -1,5 +1,7 @@
-measurements.txt
+measurements*.txt
 target/
 .DS_Store
 *.iml
 .idea/
+dependency-reduced-pom.xml
+profile.html

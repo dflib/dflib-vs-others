@@ -10,3 +10,21 @@ cd 1brc
 
 mv measurements.txt /root/of/this/repo
 ```
+
+## Build and Run Tests
+
+```
+cd dflib/
+mvnd clean package
+time java -Xms16g -Xmx16g -jar target/dflib-*.jar ../measurements.txt
+```
+
+```
+cd dataframe-ec/
+mvnd clean package
+time java -Xms16g -Xmx16g -jar target/dataframe-ec-*.jar ../measurements.txt
+```
+
+## Profiling
+
+https://github.com/async-profiler/async-profiler

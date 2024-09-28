@@ -15,11 +15,11 @@ import static io.github.vmzakharov.ecdataframe.dsl.value.ValueType.STRING;
 
 public class CalculateAverage {
 
-    static private final String FILE = "measurements.txt";
-
     public static void main(String[] args) {
 
-        URI measurementFile = new File(FILE).toURI();
+        long t0 = System.currentTimeMillis();
+
+        URI measurementFile = new File(args[0]).toURI();
 
         CsvSchema msSchema = new CsvSchema()
                 .addColumn("Station", STRING)
@@ -31,11 +31,15 @@ public class CalculateAverage {
 
         DataFrame measurements = msDataSet.loadAsDataFrame();
 
+        long t1 = System.currentTimeMillis();
+
         DataFrame aggregated = measurements
                 .aggregateBy(
                         Lists.immutable.of(min("Temperature", "Min"), avg2d("Temperature", "Mean"), max("Temperature", "Max")),
                         Lists.immutable.of("Station"))
                 .sortBy(Lists.immutable.of("Station"));
+
+        long t2 = System.currentTimeMillis();
 
         aggregated.forEach(row ->
                 System.out.printf(
@@ -44,5 +48,7 @@ public class CalculateAverage {
                         row.getFloat("Min"),
                         row.getDouble("Mean"),
                         row.getFloat("Max")));
+
+        System.out.printf("load: %s, agg: %s", t1 - t0, t2 - t1);
     }
 }

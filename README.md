@@ -14,17 +14,24 @@ mv measurements.txt /root/of/this/repo
 ## Build and Run Tests
 
 ```
-cd dflib/
+cd dflib-vs-others/
 mvnd clean package
-time java -Xms16g -Xmx16g -jar target/dflib-*.jar ../measurements.txt
+time java -Xms8g -Xmx8g -jar target/dflib-vs-others-*.jar ../measurements.txt
+```
+
+```
+cd dflib-vs-others-experimental/
+mvnd clean package
+time java -Xms8g -Xmx8g -jar target/dflib-vs-others-experimental-*.jar ../measurements.txt
 ```
 
 ```
 cd dataframe-ec/
 mvnd clean package
-time java -Xms16g -Xmx16g -jar target/dataframe-ec-*.jar ../measurements.txt
+time java -Xms8g -Xmx8g -jar target/dataframe-ec-*.jar ../measurements.txt
 ```
 
 ## Profiling
 
 https://github.com/async-profiler/async-profiler
+

@@ -18,7 +18,7 @@ public class CalculateAverage {
     public static void main(String[] args) {
 
         long t0 = System.currentTimeMillis();
-        long m0 = measureMemoryConsumption();
+//        long m0 = measureMemoryConsumption();
 
         URI measurementFile = new File(args[0]).toURI();
 
@@ -33,7 +33,7 @@ public class CalculateAverage {
         DataFrame measurements = msDataSet.loadAsDataFrame();
 
         long t1 = System.currentTimeMillis();
-        long m1 = measureMemoryConsumption();
+//        long m1 = measureMemoryConsumption();
 
         DataFrame aggregated = measurements
                 .aggregateBy(
@@ -42,7 +42,7 @@ public class CalculateAverage {
                 .sortBy(Lists.immutable.of("Station"));
 
         long t2 = System.currentTimeMillis();
-        long m2 = measureMemoryConsumption();
+//        long m2 = measureMemoryConsumption();
 
         aggregated.forEach(row ->
                 System.out.printf(
@@ -54,7 +54,7 @@ public class CalculateAverage {
 
         long t3 = System.currentTimeMillis();
         System.out.printf("load: %s, agg: %s, iterate: %s\n", t1 - t0, t2 - t1, t3 - t2);
-        System.out.printf("memory: %s, agg: %s\n", m1 - m0, m2 - m1);
+//        System.out.printf("memory: %s, agg: %s\n", m1 - m0, m2 - m1);
     }
 
     private static long measureMemoryConsumption() {

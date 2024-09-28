@@ -8,6 +8,16 @@ Setup:
 
 Time:
 
-* dflib: 			real	0m11.493s load: 9515, agg: 1802, iterate: 35
-* dflib-exp:      real	0m10.570s load: 9095, agg: 1295, iterate: 34
-* df-ec:			real	0m10.633s load: 8257, agg: 2183, iterate: 33
+DF| All     | Load | Aggregate | Iterate
+--|---------|------|--|--
+dflib | 11.493s | 9515 | 1802 | 35
+dflib-exp | 10.570s | 9095 | 1295 | 34 
+df-ec | 10.633s | 8257 | 2183 | 33
+
+Memory
+
+DF| +Load         | +Aggregate
+--|---------------|--
+dflib | 1,887,541,480 | 136,328
+dflib-exp | 360,893,680   | 130,632
+df-ec | 315,132,200   | 120,272

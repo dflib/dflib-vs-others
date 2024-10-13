@@ -16,6 +16,7 @@ public class CalculateAverage {
 
         DataFrame measurements = Csv.loader()
                 .header("Station", "Temperature")
+                .compactCol("Station")
                 .doubleCol("Temperature")
                 .format(CSVFormat.DEFAULT.builder().setDelimiter(';').build())
                 .load(args[0]);

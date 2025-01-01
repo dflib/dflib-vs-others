@@ -47,8 +47,8 @@ public class CalculateAverage {
                         row.get("Max")));
 
         long t3 = System.currentTimeMillis();
-        System.out.printf("load: %s, agg: %s, iterate: %s\n", t1 - t0, t2 - t1, t3 - t2);
-//        System.out.printf("memory: %s, agg: %s\n", m1 - m0, m2 - m1);
+        System.err.printf("load: %s, agg: %s, iterate: %s\n", t1 - t0, t2 - t1, t3 - t2);
+//        System.err.printf("memory: %s, agg: %s\n", m1 - m0, m2 - m1);
     }
 
     private static long measureMemoryConsumption() {

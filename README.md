@@ -14,21 +14,21 @@ mv measurements.txt /root/of/this/repo
 ## Build and Run Tests
 
 ```
-cd dflib-vs-others/
+cd dflib-1-1/
 mvnd clean package
-time java -Xms8g -Xmx8g -jar target/dflib-vs-others-*.jar ../measurements.txt
+time java -Xms8g -Xmx8g -jar target/dflib-1-1-*.jar ../measurements.txt
 ```
 
 ```
-cd dflib-vs-others-experimental/
+cd dflib-2-0/
 mvnd clean package
-time java -Xms8g -Xmx8g -jar target/dflib-vs-others-experimental-*.jar ../measurements.txt
+time java -Xms8g -Xmx8g -jar target/dflib-2-0-*.jar ../measurements.txt
 ```
 
 ```
-cd dataframe-ec/
+cd dataframe-ec-1-0/
 mvnd clean package
-time java -Xms8g -Xmx8g -jar target/dataframe-ec-*.jar ../measurements.txt
+time java -Xms8g -Xmx8g -jar target/dataframe-ec-1-0-*.jar ../measurements.txt
 ```
 
 ## Profiling

@@ -1,11 +1,10 @@
-package org.dflib.vsothers;
+package org.dflib20.vsothers;
 
 import org.apache.commons.csv.CSVFormat;
 import org.dflib.DataFrame;
 import org.dflib.csv.Csv;
 
-import static org.dflib.Exp.$col;
-import static org.dflib.Exp.$double;
+import static org.dflib.Exp.*;
 
 public class CalculateAverage {
 
@@ -16,8 +15,8 @@ public class CalculateAverage {
 
         DataFrame measurements = Csv.loader()
                 .header("Station", "Temperature")
+                .floatCol("Temperature")
                 .compactCol("Station")
-                .doubleCol("Temperature")
                 .format(CSVFormat.DEFAULT.builder().setDelimiter(';').build())
                 .load(args[0]);
 
@@ -28,9 +27,9 @@ public class CalculateAverage {
                 .group("Station")
                 .cols("Min", "Mean", "Max", "Station")
                 .agg(
-                        $double("Temperature").min(),
-                        $double("Temperature").avg(),
-                        $double("Temperature").max(),
+                        $float("Temperature").min(),
+                        $float("Temperature").avg(),
+                        $float("Temperature").max(),
                         $col("Station").first()
                 )
                 .sort($col("Station").asc());

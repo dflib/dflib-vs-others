@@ -3,7 +3,7 @@
 
 ### Setup 1 - 30 mln rows 
 * MacBook Pro, M4 Pro, 48GB 
-* -Xmx8g -Xms8g
+* -Xmx12g -Xms12g
 
 
 DF        | All     | Load  | Aggregate | Iterate

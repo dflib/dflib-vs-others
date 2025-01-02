@@ -2,19 +2,7 @@
 
 ## 2025-01-01
 
-### Setup 1 - 30 mln rows 
-* MacBook Pro, M4 Pro, 48GB 
-* -Xmx12g -Xms12g
-
-
-Time             | All     | Load  | Agg_Sort  | Iterate
------------------|---------|-------|-----------|--------
-dflib-1-1        | 5.900s  | 5055  | 692       | 24
-dflib-2-0        | 5.732s  | 4908  | 669       | 24 
-df-ec-1-0        | 5.496s  | 4288  | 1047      | 23
-tablesaw-0-43 [1]| 10.015s | 3278  | 6485      | 19
-
-### Setup 2 - 100 mln rows 
+### Setup 1 - 100 mln rows 
 * MacBook Pro, M4 Pro, 48GB 
 * -Xmx36g -Xms36g
 

@@ -1,3 +1,4 @@
+# Benchmark Runs
 
 ## 2025-01-01
 
@@ -35,4 +36,5 @@ tablesaw-0-43 |   656,122,280   | 248,152
 
 
 [1] Tablesaw does rounding differently (?), so DFLib and DataframeEC averages do not match Tablesaw exactly
+
 [2] With heaps >32G, Java can no longer use 32-bit pointers. In other words, large heaps require more memory per object.

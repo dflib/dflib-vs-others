@@ -3,6 +3,7 @@ package org.dflib20.vsothers;
 import org.apache.commons.csv.CSVFormat;
 import org.dflib.DataFrame;
 import org.dflib.csv.Csv;
+import org.dflib.csv.parser.format.CsvFormat;
 
 import static org.dflib.Exp.*;
 
@@ -17,7 +18,7 @@ public class CalculateAverage {
                 .header("Station", "Temperature")
                 .floatCol("Temperature")
                 .compactCol("Station")
-                .format(CSVFormat.DEFAULT.builder().setDelimiter(';').build())
+                .format(CsvFormat.defaultFormat().delimiter(";").build())
                 .load(args[0]);
 
         long t1 = System.nanoTime();
